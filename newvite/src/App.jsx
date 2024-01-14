@@ -4,10 +4,12 @@ function App() {
   
   let [Counter,setCount]=useState(5)
   const sub=()=>{
-    setCount(--Counter)
+    if(Counter>-20)
+      setCount(--Counter)
   }
   const add=()=>{
-    setCount(++Counter)
+    if(Counter<20)
+      setCount(++Counter)
   }
   return (
     <>
